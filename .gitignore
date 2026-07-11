@@ -1,0 +1,24 @@
+# SQLite database files (legacy)
+*.db
+*.db-shm
+*.db-wal
+
+# SQL Server LocalDB database files (except the ones in Data/)
+*.mdf
+*.ldf
+!Data/CajaDGM.mdf
+!Data/CajaDGM_log.ldf
+
+# Build results
+bin/
+obj/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IDE files
+*.swp
+*~
+.DS_Store
