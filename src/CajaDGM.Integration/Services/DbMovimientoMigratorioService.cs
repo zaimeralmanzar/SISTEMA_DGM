@@ -26,6 +26,22 @@ public class DbMovimientoMigratorioService : IMovimientoMigratorioService
                 "Esta persona ya tiene un movimiento de entrada activo.");
         }
 
+        var yaExiste = await db.Personas.AnyAsync(p =>
+            (!string.IsNullOrWhiteSpace(movimiento.CedulaPersona) && p.Cedula == movimiento.CedulaPersona) ||
+            (!string.IsNullOrWhiteSpace(movimiento.PasaportePersona) && p.Pasaporte == movimiento.PasaportePersona));
+
+        if (!yaExiste)
+        {
+            db.Personas.Add(new PersonaEntity
+            {
+                Cedula = movimiento.CedulaPersona,
+                Pasaporte = movimiento.PasaportePersona,
+                Nombres = movimiento.NombresPersona,
+                Apellidos = movimiento.ApellidosPersona,
+                Nacionalidad = movimiento.Nacionalidad,
+            });
+        }
+
         db.MovimientosMigratorios.Add(new MovimientoMigratorioEntity
         {
             CedulaPersona = movimiento.CedulaPersona,

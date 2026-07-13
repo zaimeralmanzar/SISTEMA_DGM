@@ -72,7 +72,6 @@ internal static class Program
         try
         {
             using var db = factory.CreateDbContext();
-            db.Database.EnsureDeleted(); // Agregar para recrear esquema
             db.Database.EnsureCreated();
             return true;
         }
