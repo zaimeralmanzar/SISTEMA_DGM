@@ -56,13 +56,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const updateProfile = async (updates: Partial<Pick<User, 'phone' | 'address' | 'secondaryEmail'>>) => {
     if (!user) return;
-    const updated = authService.updateProfile(user.id, updates);
+    const updated = await authService.updateProfile(user.id, updates);
     setUser(updated);
   };
 
   const changePassword = async (current: string, next: string) => {
     if (!user) return;
-    authService.changePassword(user.id, current, next);
+    await authService.changePassword(user.id, current, next);
   };
 
   return (

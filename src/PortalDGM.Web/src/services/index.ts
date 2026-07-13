@@ -9,22 +9,16 @@ import { eticketServiceMock } from './mocks/eticketService.mock';
 import { overstayServiceMock } from './mocks/overstayService.mock';
 import { documentVerificationServiceMock } from './mocks/documentVerificationService.mock';
 
-// Login y sesión usan mock para que las credenciales demo siempre funcionen.
-// Register llama al API real para que el cliente quede registrado en el CORE.
-export const authService = {
-  login: authServiceMock.login.bind(authServiceMock),
-  logout: authServiceMock.logout.bind(authServiceMock),
-  getCurrentUser: authServiceMock.getCurrentUser.bind(authServiceMock),
-  register: authServiceApi.register.bind(authServiceApi),
-  updateProfile: authServiceMock.updateProfile.bind(authServiceMock),
-  changePassword: authServiceMock.changePassword.bind(authServiceMock),
-};
+import { apiAuthService } from './apiAuthService';
 
-export const applicationService = applicationServiceMock;
-export const serviceCatalogService = serviceCatalogServiceMock;
-export const appointmentService = appointmentServiceMock;
-export const paymentService = paymentServiceMock;
-export const notificationService = notificationServiceMock;
-export const eticketService = eticketServiceMock;
-export const overstayService = overstayServiceMock;
-export const documentVerificationService = documentVerificationServiceMock;
+const useMocks = import.meta.env.VITE_USE_MOCKS !== 'false';
+
+export const authService = useMocks ? authServiceMock : apiAuthService;
+export const applicationService = useMocks ? applicationServiceMock : applicationServiceMock;
+export const serviceCatalogService = useMocks ? serviceCatalogServiceMock : serviceCatalogServiceMock;
+export const appointmentService = useMocks ? appointmentServiceMock : appointmentServiceMock;
+export const paymentService = useMocks ? paymentServiceMock : paymentServiceMock;
+export const notificationService = useMocks ? notificationServiceMock : notificationServiceMock;
+export const eticketService = useMocks ? eticketServiceMock : eticketServiceMock;
+export const overstayService = useMocks ? overstayServiceMock : overstayServiceMock;
+export const documentVerificationService = useMocks ? documentVerificationServiceMock : documentVerificationServiceMock;
