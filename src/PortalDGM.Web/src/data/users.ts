@@ -22,6 +22,7 @@ export const DEMO_USERS: User[] = [
     firstName: 'Carlos',
     lastName: 'Ramírez',
     role: 'analyst',
+    documentType: 'cedula',
     documentNumber: '001-1234567-8',
     nationality: 'Dominicana',
     birthDate: '1985-11-20',
