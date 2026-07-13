@@ -9,9 +9,17 @@ import { eticketServiceMock } from './mocks/eticketService.mock';
 import { overstayServiceMock } from './mocks/overstayService.mock';
 import { documentVerificationServiceMock } from './mocks/documentVerificationService.mock';
 
-const useMocks = import.meta.env.VITE_USE_MOCKS !== 'false';
+// Login y sesión usan mock para que las credenciales demo siempre funcionen.
+// Register llama al API real para que el cliente quede registrado en el CORE.
+export const authService = {
+  login: authServiceMock.login.bind(authServiceMock),
+  logout: authServiceMock.logout.bind(authServiceMock),
+  getCurrentUser: authServiceMock.getCurrentUser.bind(authServiceMock),
+  register: authServiceApi.register.bind(authServiceApi),
+  updateProfile: authServiceMock.updateProfile.bind(authServiceMock),
+  changePassword: authServiceMock.changePassword.bind(authServiceMock),
+};
 
-export const authService = useMocks ? authServiceMock : authServiceApi;
 export const applicationService = applicationServiceMock;
 export const serviceCatalogService = serviceCatalogServiceMock;
 export const appointmentService = appointmentServiceMock;
