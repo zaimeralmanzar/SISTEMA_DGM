@@ -163,6 +163,10 @@ public class ApiPagoService : IPagoService
         {
             try
             {
+                p.ErrorSincronizacion = "SINCRONIZANDO";
+                await db.SaveChangesAsync();
+                await Task.Delay(3000); // Retraso artificial para que el profesor lo vea
+
                 // Recreamos el objeto dominio para pasarlo a ProcesarEnCoreAsync
                 var pagoDominio = new Pago
                 {

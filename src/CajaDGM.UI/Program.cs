@@ -163,7 +163,7 @@ internal static class Program
         services.AddTransient<HttpClient>(sp => {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://plum-flamingo-960651.hostingersite.com");
-            client.DefaultRequestHeaders.Add("Authorization", "Bearer kjgrMNMG9MC2I6B8oxJkquMzYTUdVzp6QyxgN67Ya89fe0d0");
+            client.DefaultRequestHeaders.Add("Authorization", "Bearer 3neQlzKj9czTMNPkAToJ1yUbGN38yeDtIKCqUTTfac3ee613");
             client.DefaultRequestHeaders.Add("Accept", "application/json");
             return client;
         });

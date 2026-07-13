@@ -89,8 +89,9 @@ public class FrmHistorialSincronizacion : Form
                 Servicio = p.TipoServicio,
                 Total = p.MontoTotal,
                 EstadoCore = p.SincronizadoEnCore ? "✅ Sincronizado" : 
-                            (string.IsNullOrEmpty(p.ErrorSincronizacion) ? "⏳ Pendiente" : "❌ Error"),
-                DetalleError = p.ErrorSincronizacion
+                            (p.ErrorSincronizacion == "SINCRONIZANDO" ? "🔄 Sincronizando" : 
+                            (string.IsNullOrEmpty(p.ErrorSincronizacion) ? "⏳ Pendiente" : "❌ Error")),
+                DetalleError = p.ErrorSincronizacion == "SINCRONIZANDO" ? "" : p.ErrorSincronizacion
             }).ToList();
 
             // Evitar parpadeos al refrescar
@@ -131,6 +132,11 @@ public class FrmHistorialSincronizacion : Form
             {
                 e.CellStyle!.ForeColor = Color.DarkGreen;
                 e.CellStyle.BackColor = Color.LightGreen;
+            }
+            else if (val.Contains("🔄"))
+            {
+                e.CellStyle!.ForeColor = Color.DarkBlue;
+                e.CellStyle.BackColor = Color.LightCyan;
             }
             else if (val.Contains("⏳"))
             {
