@@ -18,7 +18,7 @@ public abstract class ProxyControllerBase : ControllerBase
         var client = _httpClientFactory.CreateClient("CoreApi");
         var response = await client.GetAsync(path);
         var content = await response.Content.ReadAsStringAsync();
-        
+
         return new ContentResult
         {
             Content = content,
@@ -27,15 +27,18 @@ public abstract class ProxyControllerBase : ControllerBase
         };
     }
 
-    protected async Task<IActionResult> ProxyPostAsync(string path, object? body = null)
+    protected async Task<IActionResult> ProxyPostAsync(string path)
     {
         var client = _httpClientFactory.CreateClient("CoreApi");
-        var response = body != null 
-            ? await client.PostAsJsonAsync(path, body)
-            : await client.PostAsync(path, null);
-            
+
+        Request.EnableBuffering();
+        var bodyContent = new StreamContent(Request.Body);
+        bodyContent.Headers.ContentType =
+            new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+        var response = await client.PostAsync(path, bodyContent);
         var content = await response.Content.ReadAsStringAsync();
-        
+
         return new ContentResult
         {
             Content = content,

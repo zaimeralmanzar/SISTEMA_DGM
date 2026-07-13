@@ -8,5 +8,5 @@ public class OverstayController : ProxyControllerBase
     public OverstayController(IHttpClientFactory httpClientFactory) : base(httpClientFactory) { }
 
     [HttpPost("calculate")]
-    public Task<IActionResult> Calculate([FromBody] object body) => ProxyPostAsync("/core/v1/estadia/calculo", body);
+    public Task<IActionResult> Calculate() => ProxyPostAsync("/core/v1/estadia/calculo");
 }

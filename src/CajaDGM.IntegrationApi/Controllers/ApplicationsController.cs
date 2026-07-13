@@ -8,14 +8,14 @@ public class ApplicationsController : ProxyControllerBase
     public ApplicationsController(IHttpClientFactory httpClientFactory) : base(httpClientFactory) { }
 
     [HttpPost]
-    public Task<IActionResult> Create([FromBody] object body) => ProxyPostAsync("/core/v1/solicitudes", body);
+    public Task<IActionResult> Create() => ProxyPostAsync("/core/v1/solicitudes");
 
     [HttpGet("mine")]
-    public Task<IActionResult> GetMine() => ProxyGetAsync("/core/v1/solicitudes"); // Adjust if CORE has a specific 'mine' endpoint
+    public Task<IActionResult> GetMine() => ProxyGetAsync("/core/v1/solicitudes");
 
     [HttpGet("{id}")]
     public Task<IActionResult> GetById(string id) => ProxyGetAsync($"/core/v1/solicitudes/{id}");
 
     [HttpPost("{id}/documents")]
-    public Task<IActionResult> UploadDocument(string id, [FromBody] object body) => ProxyPostAsync($"/core/v1/solicitudes/{id}/documentos", body);
+    public Task<IActionResult> UploadDocument(string id) => ProxyPostAsync($"/core/v1/solicitudes/{id}/documentos");
 }

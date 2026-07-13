@@ -8,5 +8,5 @@ public class EticketsController : ProxyControllerBase
     public EticketsController(IHttpClientFactory httpClientFactory) : base(httpClientFactory) { }
 
     [HttpPost]
-    public Task<IActionResult> Create([FromBody] object body) => ProxyPostAsync("/core/v1/etickets", body);
+    public Task<IActionResult> Create() => ProxyPostAsync("/core/v1/etickets");
 }

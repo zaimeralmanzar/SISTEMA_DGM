@@ -15,5 +15,5 @@ public class AppointmentsController : ProxyControllerBase
     }
 
     [HttpPost]
-    public Task<IActionResult> Schedule([FromBody] object body) => ProxyPostAsync("/core/v1/citas", body);
+    public Task<IActionResult> Schedule() => ProxyPostAsync("/core/v1/citas");
 }

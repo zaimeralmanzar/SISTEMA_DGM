@@ -11,5 +11,5 @@ public class PaymentsController : ProxyControllerBase
     public Task<IActionResult> GetAll() => ProxyGetAsync("/core/v1/pagos");
 
     [HttpPost]
-    public Task<IActionResult> Create([FromBody] object body) => ProxyPostAsync("/core/v1/pagos", body);
+    public Task<IActionResult> Create() => ProxyPostAsync("/core/v1/pagos");
 }
