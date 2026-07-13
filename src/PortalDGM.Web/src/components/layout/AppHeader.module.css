@@ -1,0 +1,17 @@
+.header { position: sticky; top: 0; height: var(--header-height); background: #fff; border-bottom: 1px solid var(--color-gray-200); display: flex; align-items: center; padding: 0 1.25rem; gap: 1rem; z-index: 50; box-shadow: var(--shadow-sm); }
+.menuBtn { background: none; border: none; color: var(--color-gray-600); display: flex; align-items: center; padding: 4px; border-radius: var(--radius-sm); }
+.menuBtn:hover { background: var(--color-gray-100); }
+.brand { font-weight: 600; color: var(--color-primary); font-size: 0.9rem; flex: 1; }
+.actions { display: flex; align-items: center; gap: 0.5rem; }
+.iconBtn { position: relative; background: none; border: none; color: var(--color-gray-600); display: flex; align-items: center; padding: 6px; border-radius: var(--radius-sm); }
+.iconBtn:hover { background: var(--color-gray-100); color: var(--color-primary); }
+.dot { position: absolute; top: 2px; right: 2px; background: var(--color-error); color: #fff; font-size: 0.65rem; font-weight: 700; min-width: 16px; height: 16px; border-radius: 999px; display: flex; align-items: center; justify-content: center; padding: 0 3px; }
+.userMenu { position: relative; }
+.userBtn { display: flex; align-items: center; gap: 6px; background: none; border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); padding: 5px 10px; font-size: 0.85rem; color: var(--color-gray-700); }
+.userBtn:hover { background: var(--color-gray-50); }
+.avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; }
+.userName { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dropdown { position: absolute; right: 0; top: calc(100% + 6px); background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); box-shadow: var(--shadow-md); min-width: 180px; z-index: 200; padding: 6px; }
+.dropdown button { width: 100%; text-align: left; background: none; border: none; padding: 8px 12px; font-size: 0.875rem; color: var(--color-gray-700); border-radius: var(--radius-sm); }
+.dropdown button:hover { background: var(--color-gray-50); }
+.dropdown hr { border: none; border-top: 1px solid var(--color-gray-200); margin: 4px 0; }

@@ -1,0 +1,17 @@
+.page { display: flex; flex-direction: column; gap: 1.5rem; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.title { font-size: 1.375rem; font-weight: 700; color: var(--color-gray-900); }
+.sub { color: var(--color-gray-500); font-size: 0.875rem; }
+.markAllBtn { display: flex; align-items: center; gap: 6px; background: none; border: 1px solid var(--color-gray-300); color: var(--color-gray-700); padding: 0.5rem 1rem; border-radius: var(--radius-md); font-size: 0.875rem; }
+.markAllBtn:hover { background: var(--color-gray-50); }
+.list { display: flex; flex-direction: column; gap: 0.5rem; }
+.item { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; align-items: flex-start; gap: 1rem; cursor: pointer; transition: background 0.15s; }
+.unread { background: var(--color-info-light); border-color: #bfdbfe; }
+.item:hover { background: var(--color-gray-50); }
+.icon { flex-shrink: 0; margin-top: 2px; }
+.info { color: var(--color-info); } .success { color: var(--color-success); } .warning { color: var(--color-warning); } .error { color: var(--color-error); }
+.content { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.notifTitle { font-size: 0.9rem; font-weight: 600; color: var(--color-gray-900); }
+.message { font-size: 0.875rem; color: var(--color-gray-600); line-height: 1.5; }
+.date { font-size: 0.78rem; color: var(--color-gray-400); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-primary); flex-shrink: 0; margin-top: 6px; }

@@ -1,0 +1,9 @@
+.field { display: flex; flex-direction: column; gap: 4px; }
+.label { font-size: 0.875rem; font-weight: 500; color: var(--color-gray-700); }
+.required { color: var(--color-error); }
+.input { padding: 0.5rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); font-size: 0.875rem; color: var(--color-gray-800); background: #fff; transition: border-color 0.15s; }
+.input:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(37,99,168,0.12); }
+.hasError { border-color: var(--color-error); }
+.hasError:focus { box-shadow: 0 0 0 3px rgba(220,38,38,0.12); }
+.hint { font-size: 0.8rem; color: var(--color-gray-500); }
+.error { font-size: 0.8rem; color: var(--color-error); font-weight: 500; }

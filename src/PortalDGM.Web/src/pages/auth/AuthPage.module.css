@@ -1,0 +1,28 @@
+.page { min-height: 100vh; background: var(--color-gray-50); display: flex; align-items: center; justify-content: center; padding: 2rem 1.25rem; }
+.card { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-xl); padding: 2.5rem; width: 100%; max-width: 440px; display: flex; flex-direction: column; gap: 1.25rem; box-shadow: var(--shadow-md); }
+.wide { max-width: 680px; }
+.logoBox { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.logo { background: var(--color-primary-dark); color: #fff; font-weight: 800; font-size: 1.1rem; padding: 8px 16px; border-radius: var(--radius-md); letter-spacing: 0.1em; }
+.title { font-size: 1.375rem; font-weight: 700; color: var(--color-gray-900); }
+.sub { color: var(--color-gray-500); font-size: 0.875rem; }
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.grid2 { display: grid; gap: 1rem; }
+@media (min-width: 500px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-size: 0.875rem; font-weight: 500; color: var(--color-gray-700); }
+.field input, .field select { padding: 0.5rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); font-size: 0.875rem; color: var(--color-gray-800); }
+.field input:focus, .field select:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(37,99,168,0.12); }
+.field small { font-size: 0.75rem; color: var(--color-gray-500); }
+.pwdWrapper { position: relative; display: flex; }
+.pwdWrapper input { flex: 1; padding-right: 2.25rem; }
+.eyeBtn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--color-gray-400); display: flex; align-items: center; }
+.eyeBtn:hover { color: var(--color-gray-700); }
+.submitBtn { background: var(--color-primary); color: #fff; border: none; padding: 0.75rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem; }
+.submitBtn:hover:not(:disabled) { background: var(--color-primary-dark); }
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+.demos { display: flex; flex-direction: column; gap: 0.5rem; background: var(--color-info-light); border-radius: var(--radius-md); padding: 1rem; }
+.demosLabel { font-size: 0.8rem; font-weight: 600; color: var(--color-gray-700); }
+.demoBtn { background: #fff; border: 1px solid var(--color-primary); color: var(--color-primary); padding: 0.5rem 1rem; border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 500; }
+.demoBtn:hover { background: var(--color-primary); color: #fff; }
+.register { text-align: center; font-size: 0.875rem; color: var(--color-gray-600); }
+.register a { color: var(--color-primary); font-weight: 600; }

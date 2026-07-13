@@ -1,0 +1,6 @@
+.wrapper { position: relative; display: flex; align-items: center; }
+.icon { position: absolute; left: 10px; color: var(--color-gray-400); pointer-events: none; }
+.input { width: 100%; padding: 0.5rem 2.25rem 0.5rem 2rem; border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); font-size: 0.875rem; background: #fff; color: var(--color-gray-800); }
+.input:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(37,99,168,0.12); }
+.clear { position: absolute; right: 8px; background: none; border: none; color: var(--color-gray-400); display: flex; align-items: center; padding: 2px; }
+.clear:hover { color: var(--color-gray-700); }

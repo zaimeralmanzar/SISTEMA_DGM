@@ -1,0 +1,43 @@
+.page { display: flex; flex-direction: column; gap: 1.5rem; }
+.pageHeader { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.back { background: none; border: none; color: var(--color-primary); font-size: 0.875rem; font-weight: 500; cursor: pointer; text-align: left; padding: 0; }
+.headerInfo { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.title { font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); }
+.trackNum { font-size: 0.85rem; font-family: monospace; color: var(--color-primary); font-weight: 600; }
+.layout { display: grid; gap: 1.5rem; }
+@media (min-width: 900px) { .layout { grid-template-columns: 1fr 300px; } }
+.main { display: flex; flex-direction: column; gap: 1.25rem; }
+.card { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.cardTitle { font-size: 1rem; font-weight: 600; color: var(--color-gray-900); }
+.commentLabel { font-size: 0.875rem; font-weight: 500; color: var(--color-gray-700); display: block; margin-bottom: 4px; }
+.textarea { width: 100%; padding: 0.5rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); font-size: 0.875rem; font-family: inherit; resize: vertical; }
+.textarea:focus { outline: none; border-color: var(--color-primary); }
+.actionBtns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.actionBtn { display: flex; align-items: center; gap: 6px; padding: 0.5rem 1.125rem; border-radius: var(--radius-md); font-size: 0.875rem; font-weight: 600; border: none; cursor: pointer; }
+.approveBtn { background: var(--color-success-light); color: var(--color-success); border: 1px solid #bbf7d0; }
+.approveBtn:hover { background: #dcfce7; }
+.observeBtn { background: var(--color-warning-light); color: #92400e; border: 1px solid #fde68a; }
+.observeBtn:hover { background: #fef9c3; }
+.rejectBtn { background: var(--color-error-light); color: var(--color-error); border: 1px solid #fecaca; }
+.rejectBtn:hover { background: #fee2e2; }
+.neutralBtn { background: var(--color-gray-100); color: var(--color-gray-700); border: 1px solid var(--color-gray-200); }
+.neutralBtn:hover { background: var(--color-gray-200); }
+.emptyText { font-size: 0.875rem; color: var(--color-gray-500); }
+.docList { display: flex; flex-direction: column; gap: 0.625rem; }
+.docItem { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.75rem; border-radius: var(--radius-md); border: 1px solid var(--color-gray-200); }
+.docInfo { display: flex; flex-direction: column; gap: 2px; }
+.docName { font-size: 0.875rem; font-weight: 500; color: var(--color-gray-800); }
+.docFile { font-size: 0.75rem; color: var(--color-gray-500); }
+.docObs { font-size: 0.8rem; color: var(--color-error); }
+.docBadge { font-size: 0.75rem; font-weight: 600; white-space: nowrap; }
+.approved { color: var(--color-success); }
+.rejected { color: var(--color-error); }
+.pending { color: var(--color-gray-500); }
+.aside { display: flex; flex-direction: column; gap: 1rem; }
+.sideCard { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.sideTitle { font-size: 0.9rem; font-weight: 600; color: var(--color-gray-900); }
+.dl { display: flex; flex-direction: column; gap: 0.5rem; }
+.dl div { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.dl dt { font-size: 0.78rem; font-weight: 600; color: var(--color-gray-500); min-width: 110px; }
+.dl dd { font-size: 0.875rem; color: var(--color-gray-800); }
+.commentBox { display: flex; flex-direction: column; }
