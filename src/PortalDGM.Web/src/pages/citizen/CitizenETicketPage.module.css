@@ -1,0 +1,33 @@
+.page { display: flex; flex-direction: column; gap: 1.5rem; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.title { font-size: 1.375rem; font-weight: 700; color: var(--color-gray-900); }
+.sub { color: var(--color-gray-500); font-size: 0.875rem; }
+.newBtn { display: flex; align-items: center; gap: 6px; background: var(--color-primary); color: #fff; border: none; padding: 0.625rem 1.25rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.875rem; }
+.formCard { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.formTitle { font-size: 1rem; font-weight: 600; color: var(--color-gray-900); }
+.typeToggle { display: flex; border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); overflow: hidden; width: fit-content; }
+.typeBtn { padding: 0.4rem 1.25rem; font-size: 0.875rem; background: #fff; border: none; color: var(--color-gray-600); }
+.typeActive { background: var(--color-primary); color: #fff; }
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.grid2 { display: grid; gap: 0.875rem; }
+@media (min-width: 540px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-size: 0.875rem; font-weight: 500; color: var(--color-gray-700); }
+.field input { padding: 0.5rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); font-size: 0.875rem; }
+.field input:focus { outline: none; border-color: var(--color-primary); }
+.formActions { display: flex; gap: 0.75rem; }
+.submitBtn { background: var(--color-primary); color: #fff; border: none; padding: 0.625rem 1.25rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.875rem; }
+.cancelBtn { background: #fff; border: 1px solid var(--color-gray-300); color: var(--color-gray-700); padding: 0.625rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; }
+.sectionTitle { font-size: 1rem; font-weight: 600; color: var(--color-gray-800); }
+.empty { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; padding: 3rem; color: var(--color-gray-400); text-align: center; background: #fff; border-radius: var(--radius-lg); border: 1px solid var(--color-gray-200); }
+.list { display: flex; flex-direction: column; gap: 0.75rem; }
+.ticketCard { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.ticketLeft { display: flex; align-items: flex-start; gap: 0.75rem; }
+.ticketIcon { color: var(--color-primary); flex-shrink: 0; margin-top: 2px; }
+.ticketNum { font-size: 0.875rem; font-weight: 700; color: var(--color-primary); font-family: monospace; }
+.ticketType { font-size: 0.875rem; color: var(--color-gray-800); }
+.ticketDate { font-size: 0.8rem; color: var(--color-gray-500); }
+.ticketRight { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
+.verCode { font-size: 0.75rem; background: var(--color-gray-100); padding: 3px 8px; border-radius: var(--radius-sm); }
+.printBtn { background: none; border: 1px solid var(--color-gray-300); color: var(--color-gray-600); padding: 4px 12px; border-radius: var(--radius-sm); font-size: 0.8rem; }
+.printBtn:hover { background: var(--color-gray-50); }

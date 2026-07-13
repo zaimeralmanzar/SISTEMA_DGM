@@ -1,0 +1,40 @@
+import type { IssuedDocument } from '../models';
+
+export const MOCK_ISSUED_DOCUMENTS: IssuedDocument[] = [
+  {
+    id: 'issued-001',
+    documentNumber: 'RT-2025-001847',
+    carnetNumber: 'RT-2025-001847',
+    verificationCode: 'DGM-VER-8472-XKPL',
+    type: 'Carnet de Residente Temporal',
+    holderName: 'María González',
+    issuedAt: '2024-04-15',
+    expiresAt: '2026-04-15',
+    status: 'valid',
+    applicationId: 'app-001',
+  },
+  {
+    id: 'issued-002',
+    documentNumber: 'RT-2020-000234',
+    carnetNumber: 'RT-2020-000234',
+    verificationCode: 'DGM-VER-0234-ABCD',
+    type: 'Carnet de Residente Temporal',
+    holderName: 'Juan Pérez',
+    issuedAt: '2020-01-10',
+    expiresAt: '2022-01-10',
+    status: 'expired',
+    applicationId: 'app-999',
+  },
+  {
+    id: 'issued-003',
+    documentNumber: 'RP-2019-000099',
+    carnetNumber: 'RP-2019-000099',
+    verificationCode: 'DGM-VER-0099-REVO',
+    type: 'Carnet de Residente Permanente',
+    holderName: 'Ana Martínez',
+    issuedAt: '2019-06-20',
+    expiresAt: '2029-06-20',
+    status: 'revoked',
+    applicationId: 'app-998',
+  },
+];

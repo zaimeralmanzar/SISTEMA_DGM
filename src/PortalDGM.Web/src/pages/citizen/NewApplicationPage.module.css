@@ -1,0 +1,41 @@
+.page { display: flex; flex-direction: column; gap: 1.5rem; }
+.header { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.5rem; }
+.back { background: none; border: none; color: var(--color-primary); font-size: 0.875rem; font-weight: 500; cursor: pointer; padding: 0; }
+.title { font-size: 1.25rem; font-weight: 700; color: var(--color-gray-900); margin-top: 0.5rem; }
+.code { font-size: 0.8rem; color: var(--color-gray-500); margin-top: 2px; }
+.formCard { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.stepTitle { font-size: 1.1rem; font-weight: 600; color: var(--color-gray-900); }
+.formGrid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 600px) { .formGrid { grid-template-columns: 1fr 1fr; } }
+.fullWidth { grid-column: 1 / -1; }
+.textareaLabel { font-size: 0.875rem; font-weight: 500; color: var(--color-gray-700); display: block; margin-bottom: 4px; }
+.textarea { width: 100%; padding: 0.5rem 0.75rem; border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); font-size: 0.875rem; font-family: inherit; resize: vertical; }
+.textarea:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(37,99,168,0.12); }
+.errorMsg { font-size: 0.8rem; color: var(--color-error); font-weight: 500; }
+.reqTitle { font-size: 0.875rem; font-weight: 600; color: var(--color-gray-800); margin-bottom: 0.5rem; }
+.reqList { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 4px; font-size: 0.875rem; color: var(--color-gray-700); }
+.reviewGrid { display: flex; flex-direction: column; gap: 1.25rem; }
+.reviewSection { border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); padding: 1.25rem; }
+.reviewSection h3 { font-size: 0.9rem; font-weight: 600; color: var(--color-gray-800); margin-bottom: 0.75rem; }
+.dl { display: flex; flex-direction: column; gap: 0.5rem; }
+.dl div { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.dl dt { font-size: 0.8rem; font-weight: 600; color: var(--color-gray-500); min-width: 140px; }
+.dl dd { font-size: 0.875rem; color: var(--color-gray-800); }
+.fileList { padding-left: 1.25rem; font-size: 0.875rem; color: var(--color-gray-700); display: flex; flex-direction: column; gap: 4px; }
+.agreeBox { background: var(--color-gray-50); border: 1px solid var(--color-gray-200); border-radius: var(--radius-md); padding: 1rem; }
+.agreeLabel { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.875rem; color: var(--color-gray-700); cursor: pointer; }
+.navBtns { display: flex; gap: 0.75rem; align-items: center; padding-top: 0.5rem; border-top: 1px solid var(--color-gray-200); }
+.prevBtn { background: #fff; border: 1px solid var(--color-gray-300); color: var(--color-gray-700); padding: 0.625rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; }
+.nextBtn { background: var(--color-primary); color: #fff; border: none; padding: 0.625rem 1.5rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.875rem; }
+.nextBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.draftBtn { background: #fff; border: 1px solid var(--color-primary); color: var(--color-primary); padding: 0.625rem 1.25rem; border-radius: var(--radius-md); font-size: 0.875rem; font-weight: 500; }
+.confirmation { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-xl); padding: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; max-width: 600px; margin: 0 auto; text-align: center; }
+.confIcon { width: 60px; height: 60px; border-radius: 50%; background: var(--color-success-light); color: var(--color-success); font-size: 1.75rem; display: flex; align-items: center; justify-content: center; border: 2px solid #bbf7d0; }
+.confTitle { font-size: 1.5rem; font-weight: 700; color: var(--color-gray-900); }
+.confDetails { text-align: left; width: 100%; display: flex; flex-direction: column; gap: 0.5rem; background: var(--color-gray-50); border-radius: var(--radius-md); padding: 1.25rem; }
+.confDetails div { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.confDetails dt { font-size: 0.8rem; font-weight: 600; color: var(--color-gray-500); min-width: 140px; }
+.confDetails dd { font-size: 0.875rem; color: var(--color-gray-800); }
+.confActions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+.primaryBtn { background: var(--color-primary); color: #fff; border: none; padding: 0.625rem 1.5rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.875rem; }
+.secondaryBtn { background: #fff; border: 1px solid var(--color-gray-300); color: var(--color-gray-700); padding: 0.625rem 1.5rem; border-radius: var(--radius-md); font-size: 0.875rem; }

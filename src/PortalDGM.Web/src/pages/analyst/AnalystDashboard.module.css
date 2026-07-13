@@ -1,0 +1,20 @@
+.page { display: flex; flex-direction: column; gap: 1.5rem; }
+.title { font-size: 1.375rem; font-weight: 700; color: var(--color-gray-900); }
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (min-width: 700px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+.statCard { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; }
+.statCard:hover { box-shadow: var(--shadow-md); }
+.statIcon { flex-shrink: 0; color: var(--color-primary); }
+.statVal { display: block; font-size: 1.5rem; font-weight: 800; color: var(--color-gray-900); }
+.statLabel { font-size: 0.75rem; color: var(--color-gray-500); }
+.card { background: #fff; border: 1px solid var(--color-gray-200); border-radius: var(--radius-lg); padding: 1.5rem; }
+.cardHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.cardTitle { font-size: 1rem; font-weight: 600; color: var(--color-gray-900); }
+.seeAll { background: none; border: none; color: var(--color-primary); font-size: 0.875rem; font-weight: 500; }
+.list { display: flex; flex-direction: column; gap: 0.625rem; }
+.item { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.875rem; background: var(--color-gray-50); border-radius: var(--radius-md); cursor: pointer; }
+.item:hover { background: var(--color-info-light); }
+.itemInfo { display: flex; flex-direction: column; gap: 2px; }
+.trackNum { font-size: 0.75rem; font-family: monospace; color: var(--color-primary); font-weight: 600; }
+.serviceName { font-size: 0.875rem; font-weight: 500; color: var(--color-gray-800); }
+.meta { font-size: 0.78rem; color: var(--color-gray-500); }

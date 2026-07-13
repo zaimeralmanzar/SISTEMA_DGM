@@ -1,0 +1,17 @@
+.header { background: var(--color-primary-dark); position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-md); }
+.inner { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 0.75rem; color: #fff; }
+.logoIcon { background: var(--color-secondary); color: #fff; font-weight: 800; font-size: 0.875rem; padding: 4px 8px; border-radius: var(--radius-sm); }
+.logoText { font-size: 0.95rem; font-weight: 600; color: #fff; display: none; }
+@media (min-width: 640px) { .logoText { display: block; } }
+.nav { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--color-primary-dark); padding: 1rem; gap: 4px; border-top: 1px solid rgba(255,255,255,0.1); }
+.navOpen { display: flex; }
+@media (min-width: 768px) { .nav { display: flex; flex-direction: row; align-items: center; position: static; padding: 0; gap: 4px; background: transparent; border: none; } }
+.link { color: rgba(255,255,255,0.8); font-size: 0.875rem; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); transition: color 0.15s, background 0.15s; }
+.link:hover { color: #fff; background: rgba(255,255,255,0.1); }
+.loginLink { color: rgba(255,255,255,0.9); font-size: 0.875rem; padding: 0.4rem 0.875rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.4); transition: background 0.15s; }
+.loginLink:hover { background: rgba(255,255,255,0.1); }
+.registerLink { background: var(--color-secondary); color: #fff; font-size: 0.875rem; padding: 0.4rem 0.875rem; border-radius: var(--radius-sm); font-weight: 600; transition: background 0.15s; }
+.registerLink:hover { background: var(--color-secondary-dark); }
+.hamburger { display: flex; background: none; border: none; color: #fff; padding: 4px; }
+@media (min-width: 768px) { .hamburger { display: none; } }
