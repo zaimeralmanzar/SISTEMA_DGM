@@ -78,6 +78,14 @@ export const authServiceApi = {
     }
     const body = await res.json();
     const user: User = mapApiUser(body?.data ?? body, data.email, data);
+    // Save to local users list so mock login works after registration
+    const users: User[] = storageAdapter.get<User[]>('users') ?? [];
+    if (!users.some(u => u.email.toLowerCase() === user.email.toLowerCase())) {
+      storageAdapter.set('users', [...users, user]);
+    }
+    const passwords: Record<string, string> = storageAdapter.get<Record<string, string>>('passwords') ?? {};
+    passwords[user.email] = data.password;
+    storageAdapter.set('passwords', passwords);
     storageAdapter.set(SESSION_KEY, user);
     return user;
   },
