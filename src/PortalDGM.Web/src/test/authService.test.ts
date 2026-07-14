@@ -33,7 +33,7 @@ describe('authService register', () => {
   it('registers a new user', async () => {
     const user = await authServiceMock.register({
       email: 'nuevo@test.com', password: 'Test1234*', firstName: 'Juan', lastName: 'Pérez',
-      role: 'citizen', documentType: 'passport', documentNumber: 'ZZ999999',
+      role: 'citizen', documentType: 'PASAPORTE', documentNumber: 'ZZ999999',
       nationality: 'Venezolana', birthDate: '1990-01-01', phone: '809-000-0000', address: 'Test 123',
     });
     expect(user.email).toBe('nuevo@test.com');
@@ -43,12 +43,12 @@ describe('authService register', () => {
   it('throws on duplicate email', async () => {
     await authServiceMock.register({
       email: 'dup@test.com', password: 'Test1234*', firstName: 'A', lastName: 'B',
-      role: 'citizen', documentType: 'passport', documentNumber: 'ZZ111111',
+      role: 'citizen', documentType: 'PASAPORTE', documentNumber: 'ZZ111111',
       nationality: 'Test', birthDate: '1990-01-01', phone: '809-000-0001', address: 'Addr 1',
     });
     await expect(authServiceMock.register({
       email: 'dup@test.com', password: 'Test1234*', firstName: 'C', lastName: 'D',
-      role: 'citizen', documentType: 'passport', documentNumber: 'ZZ222222',
+      role: 'citizen', documentType: 'PASAPORTE', documentNumber: 'ZZ222222',
       nationality: 'Test', birthDate: '1990-01-01', phone: '809-000-0002', address: 'Addr 2',
     })).rejects.toThrow();
   });

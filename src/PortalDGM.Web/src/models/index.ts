@@ -6,7 +6,7 @@ export interface User {
   firstName: string;
   lastName: string;
   role: UserRole;
-  documentType: 'passport' | 'cedula';
+  documentType: 'PASAPORTE' | 'CEDULA';
   documentNumber: string;
   nationality: string;
   birthDate: string;

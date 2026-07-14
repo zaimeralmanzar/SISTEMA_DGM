@@ -11,5 +11,5 @@ public class AuthController : ProxyControllerBase
     public Task<IActionResult> Login() => ProxyPostAsync("/core/v1/auth/login");
 
     [HttpPost("register")]
-    public Task<IActionResult> Register() => ProxyPostAsync("/core/v1/auth/register");
+    public Task<IActionResult> Register() => ProxyPostAsync("/core/v1/personas");
 }

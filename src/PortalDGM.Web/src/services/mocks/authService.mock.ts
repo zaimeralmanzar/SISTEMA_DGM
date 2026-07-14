@@ -46,7 +46,7 @@ export const authServiceMock = {
       firstName: data.firstName,
       lastName: data.lastName,
       role: 'citizen',
-      documentType: data.documentType,
+      documentType: data.documentType as 'PASAPORTE' | 'CEDULA',
       documentNumber: data.documentNumber,
       nationality: data.nationality,
       birthDate: data.birthDate,

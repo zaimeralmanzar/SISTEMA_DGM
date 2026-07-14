@@ -62,7 +62,7 @@ export function ProfilePage() {
         <dl className={styles.dl}>
           <div><dt>Nombre completo</dt><dd>{user.firstName} {user.lastName}</dd></div>
           <div><dt>Correo principal</dt><dd>{user.email}</dd></div>
-          <div><dt>Tipo de documento</dt><dd>{user.documentType === 'passport' ? 'Pasaporte' : 'Cédula'}</dd></div>
+          <div><dt>Tipo de documento</dt><dd>{user.documentType === 'PASAPORTE' ? 'Pasaporte' : 'Cedula'}</dd></div>
           <div><dt>Número de documento</dt><dd>{user.documentNumber}</dd></div>
           <div><dt>Nacionalidad</dt><dd>{user.nationality}</dd></div>
           <div><dt>Fecha de nacimiento</dt><dd>{formatDate(user.birthDate)}</dd></div>

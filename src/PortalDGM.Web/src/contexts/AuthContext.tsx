@@ -18,7 +18,7 @@ export interface RegisterData {
   firstName: string;
   lastName: string;
   role?: 'citizen' | 'analyst';
-  documentType: 'passport' | 'cedula';
+  documentType: 'PASAPORTE' | 'CEDULA';
   documentNumber: string;
   nationality: string;
   birthDate: string;

@@ -31,10 +31,9 @@ public abstract class ProxyControllerBase : ControllerBase
     {
         var client = _httpClientFactory.CreateClient("CoreApi");
 
-        Request.EnableBuffering();
-        var bodyContent = new StreamContent(Request.Body);
-        bodyContent.Headers.ContentType =
-            new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        using var reader = new System.IO.StreamReader(Request.Body);
+        var rawBody = await reader.ReadToEndAsync();
+        var bodyContent = new StringContent(rawBody, System.Text.Encoding.UTF8, "application/json");
 
         var response = await client.PostAsync(path, bodyContent);
         var content = await response.Content.ReadAsStringAsync();

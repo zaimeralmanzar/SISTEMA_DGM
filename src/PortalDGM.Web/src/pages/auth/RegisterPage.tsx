@@ -14,7 +14,7 @@ export function RegisterPage() {
   const [showPwd, setShowPwd] = useState(false);
   const [form, setForm] = useState<RegisterData & { confirmPassword: string }>({
     firstName: '', lastName: '', email: '', password: '', confirmPassword: '',
-    documentType: 'passport', documentNumber: '', nationality: '', birthDate: '',
+    documentType: 'PASAPORTE', documentNumber: '', nationality: '', birthDate: '',
     phone: '', address: '', secondaryEmail: '',
   });
 
@@ -55,8 +55,8 @@ export function RegisterPage() {
             <div className={styles.field}>
               <label htmlFor="docType">Tipo de documento *</label>
               <select id="docType" required value={form.documentType} onChange={set('documentType')}>
-                <option value="passport">Pasaporte</option>
-                <option value="cedula">Cédula</option>
+                <option value="PASAPORTE">Pasaporte</option>
+                <option value="CEDULA">Cedula</option>
               </select>
             </div>
             <div className={styles.field}><label htmlFor="docNumber">Número de documento *</label><input id="docNumber" required value={form.documentNumber} onChange={set('documentNumber')} /></div>
