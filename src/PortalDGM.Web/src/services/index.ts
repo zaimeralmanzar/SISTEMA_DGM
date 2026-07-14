@@ -13,7 +13,14 @@ import { apiAuthService } from './apiAuthService';
 
 const useMocks = import.meta.env.VITE_USE_MOCKS !== 'false';
 
-export const authService = useMocks ? authServiceMock : apiAuthService;
+export const authService = {
+  login: authServiceMock.login.bind(authServiceMock),
+  logout: authServiceMock.logout.bind(authServiceMock),
+  getCurrentUser: authServiceMock.getCurrentUser.bind(authServiceMock),
+  register: apiAuthService.register.bind(apiAuthService),
+  updateProfile: authServiceMock.updateProfile.bind(authServiceMock),
+  changePassword: authServiceMock.changePassword.bind(authServiceMock),
+};
 export const applicationService = useMocks ? applicationServiceMock : applicationServiceMock;
 export const serviceCatalogService = useMocks ? serviceCatalogServiceMock : serviceCatalogServiceMock;
 export const appointmentService = useMocks ? appointmentServiceMock : appointmentServiceMock;
