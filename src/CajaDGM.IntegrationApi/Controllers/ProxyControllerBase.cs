@@ -27,13 +27,22 @@ public abstract class ProxyControllerBase : ControllerBase
         };
     }
 
-    protected async Task<IActionResult> ProxyPostAsync(string path)
+    protected async Task<IActionResult> ProxyPostAsync(string path, object body = null)
     {
         var client = _httpClientFactory.CreateClient("CoreApi");
 
-        using var reader = new System.IO.StreamReader(Request.Body);
-        var rawBody = await reader.ReadToEndAsync();
-        var bodyContent = new StringContent(rawBody, System.Text.Encoding.UTF8, "application/json");
+        HttpContent bodyContent;
+        if (body != null)
+        {
+            var json = System.Text.Json.JsonSerializer.Serialize(body);
+            bodyContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+        }
+        else
+        {
+            using var reader = new System.IO.StreamReader(Request.Body);
+            var rawBody = await reader.ReadToEndAsync();
+            bodyContent = new StringContent(rawBody, System.Text.Encoding.UTF8, "application/json");
+        }
 
         var response = await client.PostAsync(path, bodyContent);
         var content = await response.Content.ReadAsStringAsync();
